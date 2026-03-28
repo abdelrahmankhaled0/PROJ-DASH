@@ -8,28 +8,33 @@ import Checkout from "./pages/Checkout";
 import ProductDetails from "./pages/ProductDetails";
 import { CartProvider } from "./components/CartContext";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/home",
+      element: <Home />,
+    },
+    {
+      path: "/card",
+      element: <Card />,
+    },
+    {
+      path: "/checkout",
+      element: <Checkout />,
+    },
+    {
+      path: "/product/:id",
+      element: <ProductDetails />,
+    },
+  ],
   {
-    path: "/",
-    element: <Login />,
+    basename: "/PROJ-DASH",
   },
-  {
-    path: "/home",
-    element: <Home />,
-  },
-  {
-    path: "/card",
-    element: <Card />,
-  },
-  {
-    path: "/checkout",
-    element: <Checkout />,
-  },
-  {
-    path: "/product/:id",
-    element: <ProductDetails />,
-  },
-]);
+);
 
 function App() {
   return (
