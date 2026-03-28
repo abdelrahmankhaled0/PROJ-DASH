@@ -2,13 +2,13 @@ import "./App.css";
 import Login from "./components/Login";
 // import Login from "./components/Login";
 import Home from "./pages/Home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Card from "./pages/Card";
 import Checkout from "./pages/Checkout";
 import ProductDetails from "./pages/ProductDetails";
 import { CartProvider } from "./components/CartContext";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Login />,
